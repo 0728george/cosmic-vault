@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
-import './index.css'  // Tailwind
+import './index.css'  // Tailwind CSS
 
 const app = createApp(App)
 app.use(createPinia())
