@@ -12,7 +12,7 @@ type Document = {
 
 export function DocumentCard({ slug, title, author, year, license, description }: Document) {
   return (
-    <Link href={`/document/${slug}`}>
+    <Link href={`/document/${slug}`} className="block">
       <div className="group bg-cosmic-800/50 backdrop-blur-sm border border-cosmic-700/50 rounded-xl p-6 hover:border-cosmic-accent/70 transition-all duration-300 hover:transform hover:scale-105">
         <h3 className="text-xl font-semibold text-white group-hover:text-cosmic-accent transition-colors">
           {title}
