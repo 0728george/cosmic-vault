@@ -2,15 +2,14 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Fuse from "fuse.js";
-import { allDocuments } from "@/content/documents";
-import { DocumentCard } from "@/components/DocumentCard";
-
+import { documents } from "@/data/documents";
+import { DocumentCard } from "@/components/DocumentCard"
 export function SearchInterface() {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState(allDocuments);
+  const [results, setResults] = useState(documents);
 
   const fuse = useMemo(() => {
-    return new Fuse(allDocuments, {
+    return new Fuse(documents, {
       keys: ["title", "author", "year", "tags", "description"],
       threshold: 0.3,
       includeScore: true,
@@ -20,7 +19,7 @@ export function SearchInterface() {
 
   useEffect(() => {
     if (query.trim() === "") {
-      setResults(allDocuments.slice(0, 12)); // show recent/popular on empty
+      setResults(documents.slice(0, 12)); // show recent/popular on empty
     } else {
       const fuseResults = fuse.search(query);
       setResults(fuseResults.map((r) => r.item));
