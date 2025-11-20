@@ -1,6 +1,8 @@
+"use client";
+
 export function StarsBackground() {
   return (
-    <div className="fixed inset-0 -z-10">
+    <div className="fixed inset-0 -z-10 overflow-hidden">
       <div className="absolute inset-0 bg-cosmic-gradient" />
       <div 
         className="absolute inset-0 opacity-30"
