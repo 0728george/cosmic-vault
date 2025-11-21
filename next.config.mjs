@@ -1,25 +1,8 @@
-import { withNextOnPages } from '@cloudflare/next-on-pages';
+// Remove the old withNextOnPages wrapper
+import { withOpenNext } from '@opennextjs/cloudflare';
 
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  images: {
-    unoptimized: true,              // Required on Cloudflare
-  },
-  // Add security headers you already wanted
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
-          { key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline';" },
-        ],
-      },
-    ];
-  },
+  // your existing config (images.unoptimized, etc.)
 };
 
-export default withNextOnPages(nextConfig);
-EOF
+export default withOpenNext(nextConfig);
