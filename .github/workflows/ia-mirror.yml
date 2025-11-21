@@ -1,0 +1,22 @@
+name: Mirror to Internet Archive
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install IA CLI
+        run: pip install internetarchive
+
+      - name: Mirror to IA
+        env:
+          IA_ACCESS_KEY: ${{ secrets.IA_ACCESS_KEY }}
+          IA_SECRET_KEY: ${{ secrets.IA_SECRET_KEY }}
+        run: ia upload cosmic-vault-$GITHUB_TAG . --metadata="title:Cosmic Vault v$GITHUB_TAG" --metadata="creator:0728george" --metadata="subject:public domain;knowledge archive" --metadata="language:en" --metadata="collection:opensource" --checksum --remote-name=cosmic-vault-v$GITHUB_TAG.tar.gz
