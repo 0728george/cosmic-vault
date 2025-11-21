@@ -8,8 +8,8 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
     rollupOptions: {
-      output: {
-        manualChunks: undefined, // Single bundle for speed
+      input: './index.html',  // Forces Vite to use root index.html
+    // ... other options
       },
     },
   },
