@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://cosmicvault.us/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cosmicvault.us/about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cosmicvault.us/dmca</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://cosmicvault.us/document/einstein-1905</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cosmicvault.us/document/tesla-1900</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cosmicvault.us/document/apollo-11-flight-plan</loc>
+    <priority>0.7</priority>
+  </url>
+  <!-- Add more for new docs -->
+</urlset>
