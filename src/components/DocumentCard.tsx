@@ -1,20 +1,20 @@
-import Link from "next/link";
-import { LicenseBadge } from "@/components/LicenseBadge";
+import Link from 'next/link';
+import { LicenseBadge } from './LicenseBadge';
 
-type Document = {
+interface DocumentCardProps {
   slug: string;
   title: string;
   author: string;
   year: string;
   license: string;
   description: string;
-};
+}
 
-export function DocumentCard({ slug, title, author, year, license, description }: Document) {
+export function DocumentCard({ slug, title, author, year, license, description }: DocumentCardProps) {
   return (
     <Link href={`/document/${slug}`} className="block">
-      <div className="group bg-cosmic-800/50 backdrop-blur-sm border border-cosmic-700/50 rounded-xl p-6 hover:border-cosmic-accent/70 transition-all duration-300 hover:transform hover:scale-105">
-        <h3 className="text-xl font-semibold text-white group-hover:text-cosmic-accent transition-colors">
+      <div className="group bg-black/50 backdrop-blur-sm border border-purple-900/50 rounded-xl p-6 hover:border-cyan-500/70 transition-all duration-300 hover:scale-105">
+        <h3 className="text-xl font-semibold text-white group-hover:text-cyan-500 transition-colors">
           {title}
         </h3>
         <p className="text-gray-400 mt-1">
