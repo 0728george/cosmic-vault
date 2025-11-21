@@ -1,8 +1,11 @@
-// Remove the old withNextOnPages wrapper
+// next.config.mjs
 import { withOpenNext } from '@opennextjs/cloudflare';
 
 const nextConfig = {
-  // your existing config (images.unoptimized, etc.)
+  images: {
+    unoptimized: true,  // Required on Cloudflare
+  },
+  // Keep any other config you have (e.g., experimental, rewrites, etc.)
 };
 
 export default withOpenNext(nextConfig);
