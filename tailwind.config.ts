@@ -3,8 +3,9 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   darkMode: "class",
   content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./content/**/*.{md,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -18,7 +19,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "sans-serif"],
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       backgroundImage: {
         "cosmic-gradient": "radial-gradient(circle at 50% 50%, #1a0033 0%, #000000 70%)",
