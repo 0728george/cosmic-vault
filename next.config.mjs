@@ -1,12 +1,10 @@
 // next.config.mjs
-import { withOpenNext } from '@opennextjs/cloudflare/package';
-
- /** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true,   // Required for Cloudflare
+    unoptimized: true,  // Required on Cloudflare
   },
-  // Add any other config you already have here
+  // Add any other config you need (e.g., trailingSlash: true)
 };
 
-export default withOpenNext(nextConfig);
+export default nextConfig;
