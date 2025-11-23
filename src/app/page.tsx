@@ -1,4 +1,4 @@
-import { SearchInterface } from '@/components/SearchInterface';
+import { documents } from "@/data/documents";
 import { StarsBackground } from '@/components/StarsBackground';
 
 export default function Home() {
