@@ -16,7 +16,10 @@ const currentResults = results.slice(indexOfFirst, indexOfLast);
 </div>
 
 <div className="mt-8 flex justify-center gap-4">
-  <button onClick={() => setCurrentPage((p) => Math.max(1, p - 1))} disabled={currentPage === 1} className="px-4 py-2 bg-cosmic-700 rounded">
+  <button
+    onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+    disabled={currentPage === 1}
+    className="px-4 py-2 bg-cosmic-700 rounded"
     Previous
   </button>
   <button onClick={() => setCurrentPage((p) => p + 1)} disabled={indexOfLast >= results.length} className="px-4 py-2 bg-cosmic-700 rounded">
