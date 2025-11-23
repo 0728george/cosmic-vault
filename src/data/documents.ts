@@ -1,3 +1,5 @@
+import type { Document } from "@/types/document";
+
 export type Document = {
   slug: string;
   title: string;
